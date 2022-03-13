@@ -40,14 +40,14 @@ def main():
     for i in range(len(gradovi)):
         print(f"{i+1}. {gradovi[i].grad}")
 
-
     while True:
         unosGrad = int(input("Odaberite redni broj grada: "))
         odabir = unosGrad - 1        
 
-        if odabir >= 0 and unosGrad < len(gradovi):
+        if odabir >= 0 and odabir < len(gradovi):
             vrijeme_zg = datetime.now()        
-            vrijeme_odabir = vrijeme_zg.replace(hour = vrijeme_zg.hour + gradovi[odabir].zona)
+            sat = vrijeme_zg.hour + gradovi[odabir].zona
+            vrijeme_odabir = vrijeme_zg.replace(hour = sat if sat < 24 else sat - 24)
 
             print(f"Zagreb: {vrijeme_zg.strftime('%H:%M')}    {gradovi[odabir].grad}: {vrijeme_odabir.strftime('%H:%M')}")    
             break
@@ -56,6 +56,5 @@ def main():
             print("Nije odabran grad sa popisa! Pokušajte ponovo!")
             print()
             continue
-
 
 main()

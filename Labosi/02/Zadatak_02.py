@@ -3,7 +3,7 @@
 # 15 minuta. Zbog pojednostavljenja kôda, zanemarimo mogućnost da ćete dobiti sistemsko
 # vrijeme koje je točno 21:15:00 i slične vrijednosti.
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def ispisVremenaKorak15():
     vrijeme = datetime.now()
@@ -53,12 +53,23 @@ def ispisVremenaKorak60Object():
     else:
         vrijeme = vrijeme.replace(minute = 15)
         print(vrijeme.strftime('%H:%M'))
+        vrijeme.replace()
 
+def ispisVremena():
+    vrijeme = datetime.now()
+    razlika = (datetime.min - datetime.now()) % timedelta(minutes=15)
+    zaokr = vrijeme + razlika
+    print(zaokr)
 
 def main():
     ispisVremenaKorak15()
     ispisVremenaKorak60()
     ispisVremenaKorak60Object()
     ispisVremenaKorak15Object()
+    ispisVremena()
+
+    minTest = datetime.now().minute
+    print(minTest)
+
 
 main()

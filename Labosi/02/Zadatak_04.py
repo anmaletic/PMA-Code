@@ -17,13 +17,13 @@
 # Ispišite inicijalnu vrijednost globalne varijable, dobiveno sistemsko vrijeme, izmijenjeno
 # sistemsko vrijeme te završnu vrijednost globalne varijable.
 
-from datetime import date, datetime
+from datetime import datetime
 from random import randint
 
 _globalVar = "noć"
 
 class DanModel():
-    def __init__(self, p_naziv, p_pocetak, p_kraj) -> None:
+    def __init__(self, p_naziv, p_pocetak, p_kraj):
         self.naziv = p_naziv
         self.pocetak = p_pocetak
         self.kraj = p_kraj

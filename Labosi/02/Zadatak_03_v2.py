@@ -49,6 +49,9 @@ def main():
             continue
 
         vrijeme_zg = datetime.now()
+        vrijeme_zg = datetime.now()        
+        sat = vrijeme_zg.hour + odabirGrad.zona
+
         vrijeme_odabir = vrijeme_zg.replace(hour = vrijeme_zg.hour + odabirGrad.zona)
         print(f"Zagreb: {vrijeme_zg.strftime('%H:%M')}    {odabirGrad.grad}: {vrijeme_odabir.strftime('%H:%M')}")
         break

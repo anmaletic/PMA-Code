@@ -9,16 +9,16 @@
 
 class Ruksak():
     def __init__(self):
-        self.sadrzaj = []
+        self.sadrzaj_Ruksaka = []
 
     def putIn(self, item):
-        self.sadrzaj.append(item)
+        self.sadrzaj_Ruksaka.append(item)
 
     def getOut(self, item):
-        self.sadrzaj.remove(item)
+        self.sadrzaj_Ruksaka.remove(item)
 
     def __str__(self) -> str:
-        return f"{self.sadrzaj}"
+        return f"{self.sadrzaj_Ruksaka}"
 
 
 def main():
@@ -29,7 +29,7 @@ def main():
     CrveniRuksak.putIn("Knjiga")
     CrveniRuksak.putIn("Olovka")
 
-    PlaviRuksak.sadrzaj = CrveniRuksak.sadrzaj
+    PlaviRuksak.sadrzaj_Ruksaka = CrveniRuksak.sadrzaj_Ruksaka
 
     print(CrveniRuksak)
     print(PlaviRuksak)
