@@ -24,6 +24,19 @@ class MRZModel():
         return (f"{self.ime} {self.prezime}\n{self.datum}\n{self.rok}\n{self.drzava}\n{self.spol}\n{self.oib}\n")
 
 
+class MRZModelNoInit():
+    prezime = ""
+    ime = ""
+    datum = ""
+    rok = ""
+    drzava = ""
+    spol = ""
+    oib = ""
+
+    def __str__(self) -> str:
+        return (f"{self.ime} {self.prezime}\n{self.datum}\n{self.rok}\n{self.drzava}\n{self.spol}\n{self.oib}\n")
+
+        
 def ReadMRZ(p_mrz):
     p_mrzObjekt = MRZModel()
 
