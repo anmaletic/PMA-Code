@@ -66,5 +66,4 @@ def main():
 
     print(mrz_objekt)
 
-
 main()
