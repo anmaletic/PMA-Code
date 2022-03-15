@@ -8,7 +8,7 @@
 # rečenicu, te ispiše je li ona pangram ili nije.
 
 
-def PanagramPython(recenica:str):
+def Panagram_1(recenica:str):
     abc = "abcdefghijklmnopqrstuvwxyz"
     for slovo in recenica.lower():
         if slovo != " " and slovo in abc:
@@ -20,7 +20,7 @@ def PanagramPython(recenica:str):
         print("Recenica nije panagram!")
 
 
-def Panagram(recenica:str):
+def Panagram_2(recenica:str):
     abc = "abcdefghijklmnopqrstuvwxyz"
     for slovo in recenica.lower():
         if slovo != " " and abc.find(slovo) != -1:
@@ -37,8 +37,8 @@ def Panagram(recenica:str):
 def main():
     #   unosRecenica = input("Unesite recenicu: ")
     unosRecenica = "The quick brown fox jumps over the lazy dog"
-    PanagramPython(unosRecenica)
-    Panagram(unosRecenica)
+    Panagram_1(unosRecenica)
+    Panagram_2(unosRecenica)
 
 
 main()
