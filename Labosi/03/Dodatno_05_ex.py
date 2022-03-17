@@ -17,7 +17,6 @@ class Krug(object):
         self.polumjer = p_polumjer
 
     def Povrsina(self):
-    #    return (self.polumjer^2) * math.pi        # ne radi bez zagrada
         return self.polumjer**2 * math.pi
 
 

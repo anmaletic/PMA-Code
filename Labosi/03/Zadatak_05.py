@@ -1,3 +1,11 @@
+# Vježba 5:
+# Boje na internetu možemo prikazivati u RGB (red, green, blue, vrijednosti od 0-255) obliku ili HEX
+# (hexadecimalni broj) obliku. Napišite klasu (boja) koja sadrži ime boje, njenu RGB vrijednost u obliku liste,
+# te string koji sadrži njenu hexadecimalnu vrijednost.
+# - Napisati funkciju koja primi listu boja (klasa boja) i jedan string koji sadržava HEX vrijednost boje.
+#   Funkcija neka ispiše ime boje koju smo dobili u HEX vrijednosti.
+# - Napisati funkciju koja primi listu boja i listu koji sadrži RGB vrijednost boje. Funkcija mora vratiti
+#   ime boje.
 
 class Boja(object):
     def __init__(self, p_ime:str, p_rgb:list, p_hex:str) -> None:

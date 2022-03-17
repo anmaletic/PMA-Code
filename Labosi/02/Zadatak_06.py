@@ -18,7 +18,7 @@ class Ruksak():
         self.sadrzaj_Ruksaka.remove(item)
 
     def __str__(self) -> str:
-        return f"{self.sadrzaj_Ruksaka}"
+        return ", ".join(self.sadrzaj_Ruksaka)
 
 
 def main():
