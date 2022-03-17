@@ -10,6 +10,9 @@
 # - OIB
 
 
+# Multi row
+
+
 class MRZModel():
     def __init__(self):
         self.prezime = ""
@@ -53,14 +56,14 @@ def ReadMRZ(p_mrz):
     p_mrzObjekt.spol = p_mrz[drugiRed + 7]
     p_mrzObjekt.rok = p_mrz[drugiRed + 8 : drugiRed + 14]
     p_mrzObjekt.drzava = p_mrz[drugiRed + 15 : p_mrz.find("<", drugiRed)]
-    p_mrzObjekt.oib = p_mrz[5 : 14 ]
+    p_mrzObjekt.oib = p_mrz[15 : 26 ]
 
     return p_mrzObjekt
 
 
 def main():
 
-    mrz = "IOHRV123456789701234567890<<<<\n7701018M2006017HRV<<<<<<<<<<<7\nPREZIME<<IME<<<<<<<<<<<<<<<<<<"
+    mrz = "IOHRV987654321701234567890<<<<\n7701018M2006017HRV<<<<<<<<<<<7\nPREZIME<<IME<<<<<<<<<<<<<<<<<<"
 
     mrz_objekt = ReadMRZ(mrz)
 
