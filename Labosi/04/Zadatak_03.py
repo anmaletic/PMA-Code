@@ -28,6 +28,7 @@ class Covjek(object):
     
     def UvecajSpol(_spol:str):
         try:
+            _spol = _spol.upper()
             if _spol == "M":
                 Covjek._brM += 1
                 print("Broj muških osoba uvecan za 1.")    
@@ -41,8 +42,8 @@ class Covjek(object):
 
     
 def main():
-    Covjek.UvecajSpol("M")
-    Covjek.UvecajSpol("Z")
+    Covjek.UvecajSpol("m")
+    Covjek.UvecajSpol("ž")
     Covjek.UvecajSpol("Z")
     Covjek.UvecajSpol("Z")
     Covjek.UvecajSpol("M")    
