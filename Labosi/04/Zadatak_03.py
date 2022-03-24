@@ -26,6 +26,7 @@ class Covjek(object):
     def __init__(self) -> None:
         Covjek._id += 1
     
+    @staticmethod
     def UvecajSpol(_spol:str):
         try:
             _spol = _spol.upper()
@@ -47,9 +48,11 @@ def main():
     Covjek.UvecajSpol("Z")
     Covjek.UvecajSpol("Z")
     Covjek.UvecajSpol("M")    
-    Covjek.UvecajSpol("M")
-    Covjek.UvecajSpol("T")
-    Covjek.UvecajSpol("Z")
+
+    osoba1 = Covjek()
+    osoba1.UvecajSpol("M")
+
+
 
     print(f"Broj muških: {Covjek._brM}")
     print(f"Broj ženskih: {Covjek._brZ}")

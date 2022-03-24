@@ -13,10 +13,14 @@ class Covjek(object):
 
 def PrintClass():
     print(Covjek._imeiprezime)
+    Covjek._imeiprezime = "Perica Perilica"
+    print(Covjek._imeiprezime)
 
 
 def PrintInstance():
     osoba = Covjek()
+    print(osoba._imeiprezime)
+    osoba._imeiprezime = "mladen mladenko"
     print(osoba._imeiprezime)
 
 
