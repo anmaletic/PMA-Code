@@ -30,8 +30,7 @@ def makniGetNajvece3(lista:list, n:int):
             lista.remove(lista[0])
         else:
             lista.remove(lista[0])
-            n -= 1
-       
+            n -= 1       
     return lista
 
 
@@ -44,21 +43,36 @@ def makniGetNajvece4(lista:list, n:int):
         except:
             pass
         n -= 1
+    return lista
 
+
+def makniGetNajvece4(lista:list, n:int):
+    lista.sort(reverse=True)
+    while n > 0:
+        if(lista[0] == lista[1]):
+            lista.remove(lista[0])
+        else:
+            lista.remove(lista[0])
+            n -= 1       
     return lista
 
 
 def randomLista(n, f):
     '''funkcija pravi listu n random brojeva do f'''
     lista = list(rnd.randint(1,f) for i in range(n))
+    #lista.sort(reverse=True)
+
     return lista
-lista1 = randomLista(100000, 2000)    
+
+
+
+lista1 = randomLista(200000, 5000)    
 lista2 = list(lista1)
 lista3 = list(lista1)
 lista4 = list(lista1)
 lista5 = list(lista1)
 
-nBrojeva = 100
+nBrojeva = 200
    
 start = time.time()
 test1 = makniGetNajvece(lista1, nBrojeva)
