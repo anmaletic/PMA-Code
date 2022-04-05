@@ -8,8 +8,8 @@
 # Npr., ako je korisnik unio vrijednosti [1,2,3,4,2,4,5] program treba vratiti listu [1,2,3,4,5].
 # Koja je složenost algoritma koji ste primijenili?
 
-def getJedinstveneSet1(lista:list):
-    return set(lista)
+def getJedinstveneSetCast(lista:list):
+    return list(set(lista))
 
 
 def getJedinstveneSet(lista:list):
@@ -39,8 +39,8 @@ def main():
             break
 
     #print(getJedinstveneSet(listaBrojeva))
-    print(getJedinstvene(listaBrojeva))
-    #print(getJedinstveneSet1(listaBrojeva))
+    #print(getJedinstvene(listaBrojeva))
+    print(getJedinstveneSetCast(listaBrojeva))
 
 
 main()
