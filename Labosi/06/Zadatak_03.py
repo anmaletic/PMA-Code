@@ -39,8 +39,8 @@ def main():
             break
 
     #print(getJedinstveneSet(listaBrojeva))
-    #print(getJedinstvene(listaBrojeva))
-    print(getJedinstveneSetCast(listaBrojeva))
+    print(getJedinstvene(listaBrojeva))
+    #print(getJedinstveneSetCast(listaBrojeva))
 
 
 main()
