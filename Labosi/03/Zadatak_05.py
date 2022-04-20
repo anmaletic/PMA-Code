@@ -14,11 +14,12 @@ class Boja(object):
         self.hex = p_hex
 
 
-def GetBojaFromHex(p_boje:list, p_hex:str):    
+def GetBojaFromHex(p_boje:list, p_hex:str):
     for _boja in p_boje:
         _boja:Boja
         if _boja.hex == p_hex:
             print(_boja.ime)
+            break
 
 
 def GetBojaFromRGB(p_boje:list, p_rgb:list):    
@@ -26,6 +27,7 @@ def GetBojaFromRGB(p_boje:list, p_rgb:list):
         _boja:Boja
         if _boja.rgb == p_rgb:
             print(_boja.ime)
+            break
 
 
 def FillBojaData(p_boje:list):

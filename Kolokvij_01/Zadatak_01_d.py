@@ -13,7 +13,7 @@ import random as rnd
 
 def main():
     L = []
-    b = rnd.randint(5,15)
+    b = rnd.randint(5,14)
     i = 0
 
     print(f"Broj brojeva: {b}")

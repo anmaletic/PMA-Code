@@ -9,11 +9,14 @@
 def getObratneParne(lista:list):
     lista.reverse()
     for num in lista:
-        if num % 2 != 0:
-            lista.remove(num)
-        else:
-            if num != 2:
-                print(num)
+        if num % 2 == 0:
+            print(num)
+
+
+def getObratneParneFor(lista:list):
+    for i in range(len(lista)-2, -1, -1):
+        if lista[i] % 2 == 0:
+            print(lista[i])
 
 
 def main():
@@ -22,7 +25,7 @@ def main():
         unos = int(input("Unesite broj: "))
         L.append(unos)
 
-    getObratneParne(L)
+    getObratneParneFor(L)
 
 
 main()
