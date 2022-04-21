@@ -8,6 +8,9 @@
 # Npr., ako je korisnik unio vrijednosti [1,2,3,4,2,4,5] program treba vratiti listu [1,2,3,4,5].
 # Koja je složenost algoritma koji ste primijenili?
 
+from re import I
+
+
 def getJedinstveneSetCast(lista:list):
     return list(set(lista))
 
@@ -25,7 +28,24 @@ def getJedinstvene(lista:list):
     for num in lista:
         if num not in tempList:
             tempList.append(num)
-    return tempList
+
+    lista.reverse()
+    for num in tempList:
+        while lista.count(num) > 1:
+            lista.remove(num)
+    lista.reverse()
+    return lista
+
+
+def getJedinstveneContinue(lista:list):
+    for i in range(len(lista)):
+        j = i + 1
+        while j < len(lista):
+            if lista[i] == lista[j]:
+                lista.pop(i)
+                continue
+            j += 1
+    return lista
 
 
 def main():
@@ -39,8 +59,9 @@ def main():
             break
 
     #print(getJedinstveneSet(listaBrojeva))
-    print(getJedinstvene(listaBrojeva))
+    #print(getJedinstvene(listaBrojeva))
     #print(getJedinstveneSetCast(listaBrojeva))
+    print(getJedinstveneContinue(listaBrojeva))
 
 
 main()
