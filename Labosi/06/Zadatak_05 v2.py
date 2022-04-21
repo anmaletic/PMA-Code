@@ -35,7 +35,6 @@ class LinkedList:
         while cN != None:
             value += str(cN.value) + ", "
             cN = cN.next
-
         return value
 
         
@@ -43,8 +42,8 @@ def main():
     sll = LinkedList()
     sll.append(6)
     sll.append(1)
-#    sll.append(2)
-#    sll.append(8)
+    sll.append(2)
+    sll.append(8)
 
     print(sll)
 
