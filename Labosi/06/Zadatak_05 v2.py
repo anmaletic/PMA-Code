@@ -26,6 +26,17 @@ class LinkedList:
             while cN.next != None:
                 cN = cN.next
             cN.next = newNode
+
+    def insert(self, value, index):
+        nN = Node(value)
+        _index = 0
+        cN = self.FN
+        while _index < index - 1:
+            cN = cN.next
+            _index += 1
+        nN.next = cN.next
+        cN.next = nN 
+
           
     def __str__(self) -> str:
         value = ""
@@ -35,7 +46,8 @@ class LinkedList:
         while cN != None:
             value += str(cN.value) + ", "
             cN = cN.next
-        return value
+        value = value[:-2] if len(value) > 0 else value
+        return f"[{value}]"
 
         
 def main():
@@ -44,6 +56,7 @@ def main():
     sll.append(1)
     sll.append(2)
     sll.append(8)
+    sll.insert(9, 2)
 
     print(sll)
 
