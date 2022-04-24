@@ -37,6 +37,23 @@ class LinkedList:
         nN.next = cN.next
         cN.next = nN 
 
+    def pop(self, index):
+        _index = 0
+        cN = self.FN       
+        while _index < index:
+            pN = cN
+            cN = cN.next
+            _index += 1
+        pN.next = cN.next
+
+
+    def remove(self, value):
+        cN = self.FN       
+        while cN.value != value:
+            pN = cN
+            cN = cN.next
+        pN.next = cN.next
+
           
     def __str__(self) -> str:
         value = ""
@@ -58,6 +75,12 @@ def main():
     sll.append(8)
     sll.insert(9, 2)
 
+    print(sll)
+
+    sll.pop(2)
+    print(sll)
+
+    sll.pop(1)
     print(sll)
 
     temp = ""
