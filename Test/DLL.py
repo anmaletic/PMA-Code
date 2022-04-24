@@ -67,11 +67,14 @@ class DoubleLinkedList():
                 
     def insertBefore(self, value, node:Node):
         newNode = Node(value)
-        currentNode = node.prev
+        currentNode:Node = node.prev
 
         newNode.next = currentNode.next
         currentNode.next = newNode
         newNode.prev = currentNode 
+
+        if newNode.prev == None:
+            self.firstNode = newNode
                 
     def insertAfter(self, value, node:Node):
         newNode = Node(value)
@@ -80,6 +83,9 @@ class DoubleLinkedList():
         newNode.next = currentNode.next
         currentNode.next = newNode
         newNode.prev = currentNode 
+
+        if newNode.next == None:
+            self.lastNode = newNode
 
     def __str__(self) -> str:
         outString = ""
