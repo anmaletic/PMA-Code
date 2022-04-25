@@ -29,6 +29,7 @@ class DoubleLinkedList():
         newNode = Node(value)
         if self.firstNode == None:
             self.firstNode = newNode
+            self.lastNode = newNode
         else:
             currentNode = self.firstNode
             while currentNode.next != None:
@@ -65,16 +66,25 @@ class DoubleLinkedList():
             elif newNode.prev == None:
                 self.firstNode = newNode
                 
+    def insertFirst(self, value):
+        newNode = Node(value)
+
+        newNode.next = self.firstNode
+        self.firstNode.prev = newNode
+        self.firstNode = newNode
+
     def insertBefore(self, value, node:Node):
         newNode = Node(value)
         currentNode:Node = node.prev
 
-        newNode.next = currentNode.next
-        currentNode.next = newNode
-        newNode.prev = currentNode 
-
-        if newNode.prev == None:
+        if currentNode == None:
+            newNode.next = self.firstNode
+            self.firstNode.prev = newNode
             self.firstNode = newNode
+        else:
+            newNode.next = currentNode.next
+            currentNode.next = newNode
+            newNode.prev = currentNode 
                 
     def insertAfter(self, value, node:Node):
         newNode = Node(value)
@@ -134,7 +144,23 @@ def main():
     dll.insertAfter(999, dll.firstNode)
     print(dll)
 
+    dll.insertFirst(333)
+    print(dll)
+
+    dll.insertBefore(999, dll.firstNode)
+    print(dll)
+
+    dll.insertAfter(999, dll.lastNode)
+    print(dll)
+
     lista = dll.ToList()
+
+    listData = []
+    for item in lista:
+        item:Node
+        listData.append(item.data)
+
+    print(listData)
 
     stop = ""
 
