@@ -20,11 +20,11 @@ def InitializeMainWindow():
     root.title("Brojač znakova")
     root.geometry("300x100")
 
-    frame = ttk.Frame(root, padding="10 10 10 10")
-    frame.pack(fill=tk.BOTH, expand=True)
-
     UneseniText = tk.StringVar()
     IspisaniText = tk.StringVar()
+    
+    frame = ttk.Frame(root, padding="10 10 10 10")
+    frame.pack(fill=tk.BOTH, expand=True)
 
     labelUnos = ttk.Label(frame, text="Novi unos:")
     labelUnos.place(x="15", y="0")
@@ -56,6 +56,6 @@ def izbrisiIspis():
 
 def Main():
     InitializeMainWindow()
-    
+
 
 Main()
