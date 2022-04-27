@@ -12,12 +12,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.font import BOLD
 
-
 unos = ""
 target = ""
 poruka = ""
-
-
 
 
 def TtkStyle():
@@ -43,7 +40,7 @@ def InitializeMainWindow():
     target = tk.StringVar()
     poruka = tk.StringVar()
 
-    labelLista = ttk.Label(root, padding="10 10 0 0", background="#363636", text="Unesite listu cijelih brojeva odvojenih zarezom):", font=("Arial", 12, BOLD), foreground="White")
+    labelLista = ttk.Label(root, padding="10 10 0 0", background="#363636", text="Unesite listu cijelih brojeva odvojenih zarezom:", font=("Arial", 12, BOLD), foreground="White")
     labelLista.grid(row=0, column=0, columnspan=5, sticky=tk.W)
 
     entryLista = ttk.Entry(width="53", textvariable=unos)

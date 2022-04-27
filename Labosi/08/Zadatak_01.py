@@ -13,6 +13,7 @@ from tkinter import ttk
 UneseniText = ""
 IspisaniText = ""
 
+
 def InitializeMainWindow():
     global UneseniText, IspisaniText
 
@@ -22,7 +23,7 @@ def InitializeMainWindow():
 
     UneseniText = tk.StringVar()
     IspisaniText = tk.StringVar()
-    
+
     frame = ttk.Frame(root, padding="10 10 10 10")
     frame.pack(fill=tk.BOTH, expand=True)
 
