@@ -31,11 +31,15 @@ class DoubleLinkedList():
             self.firstNode = newNode
             self.lastNode = newNode
         else:
-            currentNode = self.firstNode
-            while currentNode.next != None:
-                currentNode = currentNode.next
-            self.lastNode = currentNode.next = newNode
-            newNode.prev = currentNode
+            # currentNode = self.firstNode
+            # while currentNode.next != None:
+            #     currentNode = currentNode.next
+            # self.lastNode = currentNode.next = newNode
+            # newNode.prev = currentNode
+
+            self.lastNode.next = newNode
+            newNode.prev = self.lastNode
+            self.lastNode = newNode
 
     def insert(self, value, index):
         newNode = Node(value)
@@ -97,6 +101,24 @@ class DoubleLinkedList():
         if newNode.next == None:
             self.lastNode = newNode
 
+    def pop(self, index):
+        _index = 0
+        currentNode = self.firstNode       
+        while _index < index:
+            previousNode = currentNode
+            currentNode = currentNode.next
+            _index += 1
+        previousNode.next = currentNode.next
+        currentNode.prev = previousNode
+
+    def remove(self, value):
+        currentNode = self.firstNode       
+        while currentNode.data != value:
+            previousNode = currentNode
+            currentNode = currentNode.next
+        previousNode.next = currentNode.next
+        currentNode.prev = previousNode
+
     def __str__(self) -> str:
         outString = ""
         currentNode = self.firstNode
@@ -134,6 +156,13 @@ def main():
     dll.append(56)
     dll.append(32)
     print(dll)
+
+
+    dll.pop(7)
+    dll.pop(5)
+    dll.pop(1)
+
+    dll.remove(48)
 
     dll.insert(3, 6)
     print(dll)

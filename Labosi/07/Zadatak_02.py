@@ -6,7 +6,7 @@
 # biti 5,4,3,2,1,0,-1,-2,-3,-4,-5.
 
 
-def printam_unatrag(n, firstRun = True, _base = 0) -> int:    
+def printam_unatrag(n, firstRun = True, _base = 0):    
     if firstRun:
         _base = -n
     
