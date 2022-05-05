@@ -7,11 +7,18 @@
 
 
 def ispisujem_inverz(s:str):
-    if len(s) == 0:
-        return
+    if len(s) == 1:
+        print(s)
     else:
         print(s[-1], end="")
         ispisujem_inverz(s[:-1])
 
+    
+def ispisujem_inverz_prof(s:str):
+    if len(s) <= 1:
+        return s        
+    return s[-1] + ispisujem_inverz_prof(s[:-1])
+
 
 ispisujem_inverz("ovo je string")
+print(ispisujem_inverz_prof("ovo je string"))

@@ -14,4 +14,16 @@ def crtam_zvjezdice(n, counter = 1):
             crtam_zvjezdice(n, counter+1)
 
 
-crtam_zvjezdice(5)
+def crtam_zvjezdice1(n):
+    if n == 0:
+        return
+    if n == 1:
+        print("*")
+        return
+    crtam_zvjezdice1(n-1)
+    print("*" * n)        
+        
+
+
+#crtam_zvjezdice(5)
+crtam_zvjezdice1(10)

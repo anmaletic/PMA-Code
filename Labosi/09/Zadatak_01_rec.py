@@ -9,28 +9,19 @@
 import random as rnd
 
 
-def dodajBroj(_lista:list):
-    broj = 1
-    while True:
-        rezMod = (broj + sum(_lista)) % 13
-        if rezMod == 0:
-            rezDiv = (broj + sum(_lista)) / 13
-            _lista.append(broj)
-
-            print(sum(_lista))
-            print(rezDiv)
-            break
-        else:
-            broj += 1
+def FindLowestNumber(_lista:list, broj = 1):
+    if (broj + sum(_lista)) % 13 == 0:
+        _lista.append(broj)
+        return broj
+    return FindLowestNumber(_lista, broj+1)
 
 
 def main():
     back_lista = []
-    back_lista = [rnd.randint(0,100) for i in range(10)]
+    back_lista.extend(rnd.randint(0,100) for i in range(10))
 
-    dodajBroj(back_lista)
+    print(FindLowestNumber(back_lista))
 
-    print(back_lista)
 
 
 main()
