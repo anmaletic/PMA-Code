@@ -30,3 +30,16 @@ isDir = os.path.isdir(filePath)
 print(f"IsDir = {isDir}")
 
 print(os.path.curdir)
+
+files = os.listdir(dirPath)
+print(files)
+
+def printAllFiles(path):
+    for file in os.listdir(path):
+        if os.path.isfile(os.path.join(path,file)):
+            print(file)
+        elif os.path.isdir(os.path.join(path,file)):
+            printAllFiles(os.path.join(path,file))
+
+printAllFiles(os.path.dirname(os.path.realpath(__file__)))
+

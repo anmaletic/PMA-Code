@@ -20,15 +20,13 @@ while True:
         break
     L1.append(unos)
 
-temp = set()
+S1 = set(L1)
 
-for item in L1:
-    if item not in temp:
-        counter = L1.count(item)
-        if counter > 1:
-            print(item, ":", counter)
-        temp.add(item)
+for item in S1:
+    counter = L1.count(item)
+    if counter > 1:
+        print(item, ":", counter)
 
 print(L1)
-print(temp)
+print(S1)
 

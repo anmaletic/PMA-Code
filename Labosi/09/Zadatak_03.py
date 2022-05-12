@@ -5,10 +5,12 @@
 
 
 def PrintLastChar():
+    #temp = ""
     with open("testna.txt") as dat:
         for line in dat:
-            print(line.replace("\n", "")[-1])
-
+            print(line.replace("\n", "")[-1], end = "")
+            #temp += line.replace("\n", "")[-1]
+    #print(temp)
 
 def main():
     PrintLastChar()

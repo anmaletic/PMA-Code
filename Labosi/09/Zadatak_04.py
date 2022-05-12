@@ -5,8 +5,9 @@
 # te pomoću operatora formatiranja (malo istražite ovu opciju).
 
 def AddToFile(_value):
-    with open("testna1.txt", "a") as dat:
+    with open("testna1.txt", "a", encoding="UTF-8") as dat:
         dat.write(str(_value) +"\n")
+        dat.write(f"{_value}\n")
 
 
 def ReadFile():    

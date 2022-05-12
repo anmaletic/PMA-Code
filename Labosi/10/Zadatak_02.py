@@ -24,12 +24,10 @@ while True:
         break
     L1.append(unos)
 
-
-temp = set()
 rj = {}
 
 for item in L1:
-    if item not in temp:
+    if item not in rj.keys():
         counter = L1.count(item)
 
         if counter > 1:
@@ -38,6 +36,5 @@ for item in L1:
             rj.update({item:0})
         
         print(item, ":", counter)
-        temp.add(item)
 
 print(rj)
