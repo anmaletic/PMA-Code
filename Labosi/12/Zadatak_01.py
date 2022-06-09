@@ -18,25 +18,30 @@ def BubbleSortPythonic(lista:list):
 def BubbleSortTemp(lista:list):
     count = 0
     n = len(lista)
-    for i in range(0, n-1):
+    for i in range(n-1):
         for j in range(i+1, n):
             count += 1
             if lista[i] > lista[j]:
                 temp = lista[i]
                 lista[i] = lista[j]
                 lista[j] = temp
+        print(lista)
     print(count)
 
 def BubbleSort(lista:list):
     count = 0
     n = len(lista)
     for i in range(n):
+        sorted = True
         for j in range(n-i-1):
             count += 1
             if lista[j] > lista[j+1]:
                 temp = lista[j]
                 lista[j] = lista[j+1]
                 lista[j+1] = temp
+                sorted = False
+        if sorted:
+            break
     print(count)
 
 
@@ -52,6 +57,7 @@ def main():
 
     #BubbleSortPythonic(lista)
     BubbleSortTemp(lista)
+    #BubbleSort(lista)
     
     print(lista)
 

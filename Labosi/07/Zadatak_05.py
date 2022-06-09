@@ -15,15 +15,15 @@ def crtam_zvjezdice(n, counter = 1):
 
 
 def crtam_zvjezdice1(n):
-    if n == 0:
+    if n <= 0:
+        print("nope")
         return
     if n == 1:
         print("*")
         return
+    print(" " * (n-1) + "*")        
     crtam_zvjezdice1(n-1)
-    print("*" * n)        
-        
-
+  
 
 #crtam_zvjezdice(5)
-crtam_zvjezdice1(10)
+#crtam_zvjezdice1(-5)
