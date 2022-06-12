@@ -1,0 +1,3 @@
+a2 je prvi red2k
+ovo je neki drugi redak
+ovo je treci redak
