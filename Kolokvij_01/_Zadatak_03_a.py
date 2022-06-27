@@ -28,6 +28,8 @@ while b != m:
     m = random.randint(start,end)
 
 
+a, b, m, n = 2,2,2,2
+
 matA = []
 for i in range(a):
     row = []
